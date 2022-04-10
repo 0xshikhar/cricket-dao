@@ -1,0 +1,54 @@
+button {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 7px;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+
+  &.anim {
+    background: linear-gradient(
+      -45deg,
+      #2c2443,
+      #64a89e,
+      #0c3c4c,
+      #7a7985,
+      #bcbabc,
+      #2c2443
+    );
+    color: white;
+    background-size: 400% 400%;
+    animation: gradient 5s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+
+  // animation-name: backgroundColorPalette;
+  // animation-duration: 5s;
+  // animation-iteration-count: infinite;
+  // animation-direction: alternate;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: translateY(-5px);
+  }
+
+  &.no-up {
+    &:hover {
+      transform: translateY(0px);
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
